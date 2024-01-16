@@ -1,0 +1,84 @@
+<%-include('header')-%>
+
+<nav class="navbar navbar-expand-lg  bg-body-tertiary p-0  ">
+    <div class="container-fluid   height">
+      <a class="navbar-brand   text-dark" href="#"><h1 class="vivek2">WELCOME TO ADMIN PAGE</h1></a>
+      
+      <a href="/signout">
+        <i class="  vivek fa-solid fa-right-from-bracket  fa-2xl" style="color: #ffffff;"></i></a>
+        
+    </div>
+</nav>
+<main class="index pt-5" id="admaindiv">
+  <!-- <div class="container search"> -->
+
+  <div class="vivek3 option d-flex align-items-center justify-content-around ">
+      <form action="/search" method="post" name="name">
+        <div class="input-group">
+          <div class="form-outline d-flex p-3">
+            <input type="search" class="form-control " name="search" placeholder="Search" required>
+                <button id="search-button" type="submit" class="btn btn-primary mx-2">
+                  
+<lord-icon
+    src="https://cdn.lordicon.com/xfftupfv.json"
+    trigger="hover"
+    colors="primary:#fff"
+    style="width:25px;height:25px"
+    >
+</lord-icon>
+                </button>
+          </div>
+          
+        </div>
+      </form>
+      <a href="/add" class=" p-2 rounded">
+        <i class="vivek4 fa-solid fa-user-plus  fa-2xl" style="color: #000000;"></i>
+        <!-- <i class="fa-solid fa-user-plus"></i> -->
+     </a>
+  </div>
+<!-- </div> -->
+  
+
+  <table class="table table-light container table-bordered my-0 mx-auto">
+      <thead >
+
+          <tr class="border border-dark border ">
+              <th class="table-light border-dark " scope="col border-dark">No.</th>
+              <th class="table-light border-dark " scope="col border-dark">Name</th>
+              <th class="table-light border-dark " scope="col border-dark">Email</th>
+              <th class="table-light border-dark " scope="col border-dark">Edit</th>
+              <th class="table-light border-dark " scope="col border-dark">Delete</th>
+          </tr>
+      </thead>
+      <tbody>
+          <% useData.forEach((x)=>{ %>
+              <tr class="border border-dark border">
+                  <td>
+                      <%=++i%>
+                  </td>
+                  <td>
+                      <%=x.name%>
+                  </td>
+                  <td>
+                      <%=x.email%>
+                  </td>
+                  <td>
+                      <a href="/edit/<%-x._id%>" class="text-white">
+                        <i class="fa-solid fa-user-pen  fa-xl" style="color: #000000;"></i>
+                        
+                      </a>
+                  </td>
+                  <td>
+                      <a href="/delete/<%-x._id%>" class="text-white"
+                          onclick="return confirm('Do you want to Remove <%-x.username%> ?')">
+                          <i class="fa-solid fa-trash  fa-xl" style="color: rgb(99, 94, 94);"></i>
+                        </a>
+                  </td>
+              </tr>
+              <% }) %>
+  </table>
+ 
+</main>
+
+
+<%-include('footer')-%>

@@ -1,0 +1,35 @@
+<%- include('header') -%>
+<div class="container p-5 justify-content-center">
+  <div class="row align-item-center">
+    <div class="col-12">
+      <table class="table table-info container table-bordered my-0 mx-auto">
+        <thead>
+          <tr>
+            <th class="table-primary" scope="col">No.</th>
+            <th class="table-primary" scope="col">Name</th>
+            <th class="table-primary" scope="col">Email</th>
+            <th class="table-primary" scope="col">Edit</th>
+            <th class="table-primary" scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+            <% searchDoc.forEach((x)=>{ %>
+                <tr>
+                    <td>
+  
+                        <%=++i%>
+                    </td>
+                    <td>
+                        <%=x.name%>
+                    </td>
+                    <td>
+                        <%=x.email%>
+                    </td>
+                </tr>
+                <% }) %>
+        </tbody> 
+      </table>
+    </div>
+  </div>
+</div>
+<%-include('footer')-%>

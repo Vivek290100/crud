@@ -1,0 +1,134 @@
+body{
+    overflow-x: hidden;
+}
+#login{
+    padding-top: 130px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+#admaindiv{
+    background-color: rgb(80, 80, 86);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.navbar{
+    background-color: rgb(80, 80, 86);
+}
+
+#squarediv{
+    
+    /* border-radius: 50px; */
+    backdrop-filter: blur(200px);
+    background-color: rgb(169, 169, 169);
+}
+#maindiv{
+    background-color: rgb(0, 0, 0);
+    width: 100vw;
+    height: 100vh;
+    color: white;
+}
+#headdiv{
+    margin-top: 30vh;
+}
+#btndiv{
+    width: 100vw;
+}
+#btn{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    margin: 5vh;
+}
+
+.vivek{
+    padding-right: 280px;
+}
+
+.vivek2{
+    padding-left: 80px;
+}
+
+.vivek3{
+    padding-right: 120px;
+}
+
+/* .vivek4{
+    padding-left: 40px;
+} */
+
+
+#formone{
+    padding: 0 3em;
+}
+#subbtn{
+    font-weight: bold;
+    border-radius: 15px;
+    
+    color: rgb(255, 255, 255);
+    
+}
+#subbtn1{
+    width: 10vw;
+    height: 8vh;
+    font-weight: bold;
+    border-radius: 15px;
+    color: rgb(0, 0, 0);
+    border: 3px solid white;
+}
+
+
+.logbut{
+    width: 120px;
+    height: 30px;
+    border: 2px solid white;
+    font-weight: bold;
+    border-radius: 8px;
+    background-color: rgb(103, 93, 97);
+    color: rgb(255, 255, 255);
+}
+
+#logbtn{
+    color: white;
+}
+
+
+#signbtn{
+    color: rgb(0, 0, 0);
+    font-weight:300;
+}
+
+#luxury{
+    color: rgb(0, 0, 0);
+    font-size: 3vw;
+}
+#luxdiv{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    /* font-family: 'Open Sans', sans-serif; */
+    /* padding-top: 50px; */
+    font-weight: 900;
+    background-color: rgb(253, 253, 253);
+}
+#login1{
+    display: flex;
+    align-items: center;
+    /* justify-content: end; */
+    padding-top: 12px;
+}
+
+
+
+#span1{
+    
+    font-weight: bold;
+}
+#span2{
+    font-weight: bold;
+}
+
+

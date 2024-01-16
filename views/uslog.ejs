@@ -1,0 +1,39 @@
+<%- include('header') -%>
+<div class="row" id="maincontainer">
+    <div class="text-center center-div col-12 col-md-12 container-fluid" id="login">
+        <div class="container border col-12 col-lg-4 py-5 mb-5 container-fluid" id="squarediv">
+            <div class="title text-dark pb-5">
+                <h1 class="font-weight-bold">USER LOGIN PAGE</h1>
+                <span>Login for Existing Users</span>
+                <% if(err){ %>
+                    <h6 class="alert alert-danger"><%-err%></h6>
+               <% } %>
+                <% if(locals.logout){%>
+                    <div class="alter alert-success text-center">
+                        <%= logout %>
+                    </div>
+                <%}%>
+            </div>
+            <form id="formone" action="/logit" method="post"  autocomplete="off">
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="email" name="email" required>
+                    
+                </div>
+                <div class="form-group mt-4">
+                    <input type="password" class="form-control" name="password" placeholder="password" required>
+                </div>
+                <div class="d-flex justify-content-center mt-4" id="btnsign">
+                    <a href="/signup" style="text-decoration: none " id="signbtn" ><i>Don't Have an Account ? </i><strong>Sign Up</strong></a>
+                </div>
+                <button type="submit" id="subbtn" class="btn btn-success rounded-pill mt-5">SUBMIT</button>
+            </form>
+                <div class="d-flex justify-content-end center-div mt-4 container-fluid" id="logbtn">
+                    <form action="/adminlogin" method="post">
+                        <a href="/adminlogin" style="text-decoration: none; color: rgb(0, 0, 0); font-weight: bold;">ADMIN LOGIN</a>
+                    </form>  
+                </div>  
+        </div>
+    </div>
+</div>
+
+<%- include('footer') -%>

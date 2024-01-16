@@ -1,0 +1,23 @@
+<%- include('header') -%>
+
+<div class="row" id="maincontainer">
+    <div class="text-center center-div col-12 col-md-12 container-fluid" id="login">
+        <div class="container border col-12 col-lg-4 py-5 mb-5 container-fluid" id="squarediv">
+            <div class="title text-white pb-5">
+                <h2 class="font-weight-bold">ADMIN CONTROL</h2>
+                <span><h3>Edit Users</h3></span>
+            </div>
+            <form id="formone" action="/update/<%-dataone._id%>" method="POST" class="pt-3" autocomplete="off">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Full Name" name="name" value="<%-dataone.name%>" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control mt-4" placeholder="email" name="email" value="<%-dataone.email%>" required>
+                </div>
+                <button type="submit" id="subbtn1" class="btn btn-success rounded-pill mt-4">ENTER</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include('footer') -%>
